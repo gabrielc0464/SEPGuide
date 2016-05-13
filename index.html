@@ -18,8 +18,26 @@
   <!--custom-->
   <link rel="stylesheet" href="custom.css">
   <link rel="stylesheet" href="nav.css">
-  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+  </script>
   <style>
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
     .navbar {
       background-color: black;
     }
@@ -42,20 +60,23 @@
         <a class="navbar-brand" href="#">SEPGuide</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#home">Home</a></li>
         <li><a href="#">SEP9</a></li>
         <li><a href="#sep10">SEP10</a></li>
         <li><a href="#">SEP11</a></li>
       </ul>
     </div>
   </nav>
-  <div class="jumbotron">
+  <div class="jumbotron" id="home">
     <h1> Welcome to the SEP Guide website</h1>
   </div>
   <div class="col-lg-12">
     <h2>Some basic tips for the SEP Class</h2>
   </div>
-  <div class="row">
+  
+  
+ <div id="flip">Click Here</div>
+<div id="panel">  <div class="row">
     <div class="col-sm-4">
       <h2>Participation</h2>
       <h3>Participation is one of the easiest parts of the SEP class.
@@ -66,11 +87,15 @@
       <h2>Homework</h2>
       <h3>The SEP class does not give that much homework in the first place. Thats why homework is especially important.
       If you miss one homework that could bring your grade down significantly.</h3></div>
-    <div class="col-sm-4">
+      
+    <div class="col-sm-4" id="panel3">
       <h2>Quizzes,Tests,Portfolio</h2>
       <h3>Quizzes and Tests are obvously a big part of your grade in any class and thats no different
       for the SEP class. The difference is that its really easy to study for. The SEP website has slides
-      that</h3></div>
+      that you can use to go over the material. Its a very useful tool to use to study.</h3></div>
+  </div></div>
+  <div class="jumbotron" id="sep9">
+    <h3>SEP</h3>
   </div>
 </body>
 
